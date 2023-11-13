@@ -55,14 +55,15 @@ else{
 
     if (age<18){discountedPrice = (rangeKilometers *0.21) / 100 * 80;}
     else if (age>=65) {discountedPrice = (rangeKilometers *0.21) / 100 * 60;}
-    else {discountedPrice = (rangeKilometers *0.21) + "" + "Non hai sconti da applicare!"}
+    else {discountedPrice =  "" + "Non hai sconti da applicare!"}
 
 
 
     document.getElementById("name").innerHTML = name;
     document.getElementById("surname").innerHTML = surname;
     document.getElementById("distance").innerHTML = rangeKilometers;
-    document.getElementById("price").innerHTML = discountedPrice;
+    
+    document.getElementById("discountedPrice").innerHTML = discountedPrice;
 
 }
 
