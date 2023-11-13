@@ -32,25 +32,37 @@ let price = (rangeKilometers * 0.21);
 
 document.getElementById("name").innerHTML = name;
 document.getElementById("surname").innerHTML = surname;
-document.getElementById("distance").innerHTML = rangeKilometers;
-document.getElementById("price").innerHTML = price;
+document.getElementById("distance").innerHTML = rangeKilometers + "Km";
+document.getElementById("price").innerHTML = price + "£";
 
 }
 
 
 //calcolare eventuale sconto da applicare al prezzo calcolato in precedenza
 function discounte_price(){
-if (age<18)
-    console.log("Il prezzo del tuo biglietto è:" + (rangeKilometers *0.21) / 100 * 80 );
+if (age<18){
+    console.log("Il prezzo del tuo biglietto è:" + (rangeKilometers *0.21) / 100 * 80 );}
 
 
-else if (age>=65)
-    console.log("Il prezzo del tuo biglietto è:" + (rangeKilometers *0.21) / 100 * 60 );
+else if (age>=65){
+    console.log("Il prezzo del tuo biglietto è:" + (rangeKilometers *0.21) / 100 * 60 );}
 
-else
-    console.log("Non hai sconti da applicare");
+else{
+    console.log("Non hai sconti da applicare");}
+
+
+    let discountedPrice;
+
+    if (age<18){discountedPrice = (rangeKilometers *0.21) / 100 * 80;}
+    else if (age>=65) {discountedPrice = (rangeKilometers *0.21) / 100 * 60;}
+    else {discountedPrice = (rangeKilometers *0.21) + "" + "Non hai sconti da applicare!"}
+
+
 
     document.getElementById("name").innerHTML = name;
+    document.getElementById("surname").innerHTML = surname;
+    document.getElementById("distance").innerHTML = rangeKilometers;
+    document.getElementById("price").innerHTML = discountedPrice;
 
 }
 
