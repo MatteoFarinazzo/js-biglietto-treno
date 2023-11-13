@@ -63,13 +63,9 @@ else{
     document.getElementById("surname").innerHTML = surname;
     document.getElementById("distance").innerHTML = rangeKilometers + "Km";
     
-    document.getElementById("discountedPrice").innerHTML = '&nbsp' + discountedPrice + "£";
+    document.getElementById("discountedPrice").innerHTML = '&nbsp' + discountedPrice ;
 
 }
 
 
-
-
-
-//output sulla pagina html con un massimo di due decimali (centesimi) per indicare il prezzo
 
