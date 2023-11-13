@@ -53,8 +53,8 @@ else{
 
     let discountedPrice;
 
-    if (age<18){discountedPrice = ((rangeKilometers *0.21) / 100 * 80).toFixed(2);}
-    else if (age>=65) {discountedPrice = ((rangeKilometers *0.21) / 100 * 60).toFixed(2);}
+    if (age<18){discountedPrice = "Scontato" + '&nbsp' + ((rangeKilometers *0.21) / 100 * 80).toFixed(2);}
+    else if (age>=65) {discountedPrice = "Scontato" + '&nbsp' + ((rangeKilometers *0.21) / 100 * 60).toFixed(2);}
     else {discountedPrice =  "" + "Non hai sconti da applicare!"}
 
 
@@ -63,7 +63,7 @@ else{
     document.getElementById("surname").innerHTML = surname;
     document.getElementById("distance").innerHTML = rangeKilometers + "Km";
     
-    document.getElementById("discountedPrice").innerHTML = "" + discountedPrice + "£";
+    document.getElementById("discountedPrice").innerHTML = '&nbsp' + discountedPrice + "£";
 
 }
 
